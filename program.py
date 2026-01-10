@@ -41,3 +41,23 @@ class Car(Vehicle):
 car = Car("Toyota")
 car.start()
 
+# polymorphism {megic methods}(__add__),(__str__):
+class point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        # object ko add kerne ke liye banaya hain 
+    def __add__ (self, other):
+        new_x = self.x + other.x
+        new_y = self.y + other.y
+        return point (new_x, new_y)
+    # object ko thik se dikhane ke liye bnaya hai 
+    def __str__(self):
+        return f"({self.x},{self.y})"
+# oject banaya hai class ka naam use ker ke our unko parameter bhe diye hain 
+p1=point(1, 2)
+p2=point(3, 4)
+#  yahan aik variable banaya hai jahan se hum dono aik variable mai store karke valus laye sakhtye hai
+p3 = p1 + p2
+# yahan f string use ker ke print kia hai 
+print (f"p1, p2 ka result hain:,{p3}")
