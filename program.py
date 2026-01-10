@@ -61,3 +61,19 @@ p2=point(3, 4)
 p3 = p1 + p2
 # yahan f string use ker ke print kia hai 
 print (f"p1, p2 ka result hain:,{p3}")
+
+# polymorphism with {__sub__} magic function:
+class shop:
+    def __init__(self,product_name, quantity):
+        self.product_name = product_name
+        self.quantity = quantity
+    def __sub__(self,other):
+        new_quantity = self.quantity - other.quantity
+        return shop (self.quantity, other.quantity)
+    def __str__(self):
+        return f"{self.product_name} ka bacha hua stock: {self.quantity}"
+total_cream = shop('total cream:', 100)
+total_sell = shop("total sell: " , 50)
+
+remain_stock = total_cream - total_sell
+print(remain_stock)
