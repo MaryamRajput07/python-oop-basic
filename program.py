@@ -72,8 +72,8 @@ class shop:
         return shop (self.quantity, other.quantity)
     def __str__(self):
         return f"{self.product_name} ka bacha hua stock: {self.quantity}"
-total_cream = shop('total cream:', 100)
+product_name = shop('medicated cream:', 100)
 total_sell = shop("total sell: " , 50)
 
-remain_stock = total_cream - total_sell
+remain_stock = product_name - total_sell
 print(remain_stock)
