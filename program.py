@@ -78,4 +78,17 @@ total_sell = shop("total sell: " , 50)
 remain_stock = product_name - total_sell
 print(remain_stock)
 
+# making private attribute in class 
+class account:
+    def __init__(self, acc_no, acc_pass):
+        self.acc_no = acc_no
+        self.acc_pass = acc_pass
+
+    def reset_pass(self):
+        print(self.acc_pass)
+
+account1 = account('1234', "abcd")
+print(account1.acc_no)
+print(account1.reset_pass())
+
         
