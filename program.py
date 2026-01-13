@@ -77,3 +77,5 @@ total_sell = shop("total sell: " , 50)
 
 remain_stock = product_name - total_sell
 print(remain_stock)
+
+        
