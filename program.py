@@ -18,6 +18,29 @@ class Dog(Animal):
 dog = Dog("Buddy")
 dog.sound()
 
+# multi-level ihneritance staticmethod function
+class car:
+    colour='black'
+    @staticmethod
+    def start():
+        print('car started...')
+    @staticmethod
+    def stop():
+        print('car stopped...')
+    
+class toyota(car):
+    def __init__(self, brand):
+        self.brand = brand
+
+class fortuner(toyota):
+    def __init__(self, type):
+        self.type = type
+
+car1 = fortuner('diesel')
+car1.start()
+
+
+
 # abstraction 
 from abc import ABC, abstractmethod
 
