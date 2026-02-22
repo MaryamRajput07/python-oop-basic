@@ -63,7 +63,58 @@ if num!=check:
     print("odd number")
 else :
     print("even number")
+# ----------------------------------------
 
+import numpy as np
+
+data = [10, 20, 30, 40, 50]
+result = np.mean(data)
+
+print("Mean:", result)
+
+
+# -------------------------------------------
+
+import numpy as np
+
+data = [10, 50, 20, 40, 30]
+result = np.median(data)
+
+print("Median:", result)
+
+
+# -----------------------------------
+
+import statistics
+
+data = [10, 20, 20, 30, 40]
+result = statistics.mode(data)
+
+print("Mode:", result)
+
+# --------------------------------
+
+import numpy as np
+
+# 1D Array (Ek seedhi line)
+a1 = np.array([1, 2, 3])
+
+# 2D Array (Table ki tarah: 2 Rows, 3 Columns)
+a2 = np.array([[1, 2, 3], 
+               [4, 5, 6]])
+
+# 3D Array (Do 2D tables ka set)
+a3 = np.array([[[1, 2], [3, 4]], 
+               [[5, 6], [7, 8]]])
+
+print("--- 1D ---")
+print(a1)
+
+print("\n--- 2D ---")
+print(a2)
+
+print("\n--- 3D ---")
+print(a3)
 
 
 
