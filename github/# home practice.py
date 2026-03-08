@@ -116,6 +116,56 @@ print(a2)
 print("\n--- 3D ---")
 print(a3)
 
+# try and except error ("agar program mai koi error aye ga tu except chalye ga our our program crash hone se bach jaye ga ")
+
+try:
+    # 1. Woh kaam jo hum karna chahte hain
+    number1 = int(input("Pehla number: "))
+    number2 = int(input("Doosra number: "))
+    
+    result = number1 / number2
+    print(f"Answer hai: {result}")
+
+except ZeroDivisionError:
+    # 2. Agar user ne 0 se divide karne ki koshish ki
+    print("Ghalti: Aap zero (0) se divide nahi kar sakte!")
+
+except ValueError:
+    # 3. Agar user ne number ki jagah 'abc' likh diya
+    print("Ghalti: Sirf numbers likhein, words nahi!")
+
+except Exception as e:
+    # 4. Koi bhi aur anjan ghalti
+    print(f"Kuch ajeeb masla hua: {e}")
+
+print("Program khatam! (Code crash nahi hua)")
+
+
+# to do list in python 
+tasks = []
+
+while True:
+    print("\n--- MERA TO-DO LIST ---")
+    print("1. Task Add Karein")
+    print("2. Saare Tasks Dekhein")
+    print("3. Task Delete Karein")
+    print("4. Exit")
+    
+    choice = input("\nOption select karein: ")
+    
+    if choice == '1':
+        item = input("Naya task: ")
+        tasks.append(item)
+    elif choice == '2':
+        for i, t in enumerate(tasks, 1):
+            print(f"{i}. {t}")
+    elif choice == '3':
+        val = int(input("Kaunsa number delete karna hai? "))
+        tasks.pop(val - 1)
+    elif choice == '4':
+        print("Bye Bye!")
+        break
+
 
 
 
